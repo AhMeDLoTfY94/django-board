@@ -1,4 +1,56 @@
 {% extends "base.html"%}
+
+{% block title%}
+{{block.super}}Home
+{% endblock %}
+{% block bread %}
+<li class="breadcrumb-item active">Home</li>
+
+{% endblock %}
 {% block content %}
-<h1>HI LOTFY</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Board</th>
+        <th scope="col">Topic</th>
+        <th scope="col">Posts</th>
+        <th scope="col">Last Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <a href="#">Django</a>
+            <br>
+            <small> this is Django</small>
+        </td>
+       
+        <td class="align-middle">0</td>
+        <td class="align-middle">0</td>
+        <td class="align-middle">-------</td>
+      </tr>
+      <tr>
+        <td>
+            <a href="#">Python</a>
+            <br>
+            <small> this is python </small>
+        </td>
+
+        <td class="align-middle">0</td>
+        <td class="align-middle">0</td>
+        <td class="align-middle">-------</td>
+      </tr>
+      <tr>
+        <td>
+            <a href="#">Random</a>
+            <br>
+            <small> this is Random</small>
+        </td>
+
+        <td class="align-middle">0</td>
+        <td class="align-middle">0</td>
+        <td class="align-middle">-------</td>
+      </tr>
+    </tbody>
+  </table>
 {% endblock %}
