@@ -18,11 +18,12 @@
       </tr>
     </thead>
     <tbody>
+      {% for board in boards %}
       <tr>
         <td>
-            <a href="#">Django</a>
+            <a href="#">{{board.name}}</a>
             <br>
-            <small> this is Django</small>
+            <small> {{board.desc}}</small>
         </td>
        
         <td class="align-middle">0</td>
@@ -30,27 +31,8 @@
         <td class="align-middle">-------</td>
       </tr>
       <tr>
-        <td>
-            <a href="#">Python</a>
-            <br>
-            <small> this is python </small>
-        </td>
+      {% endfor %}
 
-        <td class="align-middle">0</td>
-        <td class="align-middle">0</td>
-        <td class="align-middle">-------</td>
-      </tr>
-      <tr>
-        <td>
-            <a href="#">Random</a>
-            <br>
-            <small> this is Random</small>
-        </td>
-
-        <td class="align-middle">0</td>
-        <td class="align-middle">0</td>
-        <td class="align-middle">-------</td>
-      </tr>
     </tbody>
   </table>
 {% endblock %}
