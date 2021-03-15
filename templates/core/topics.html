@@ -8,3 +8,31 @@
 <li class="breadcrumb-item active">{{board}}</li>
 
 {% endblock %}
+{% block content %}
+<div class="mb-3">
+        <td>
+  <a href="{% url 'new_topic' board.id %}" class="btn btn-primary"> New Topic </a>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Topic</th>
+        <th>Starter</th>
+        <th >Replies</th>
+        <th>Views</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for topic in board.topics.all %}
+      <tr>
+      <td class="align-middle">{{ topic.subject }}</td>
+      <td class="align-middle"> {{ topic.starter }}</td>
+      <td class="align-middle">0</td>
+      <td class="align-middle">0</td>
+      <td class="align-middle">{{ topic.last_update}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

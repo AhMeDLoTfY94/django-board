@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+{% block title%}
+{{block.super}}New
+{% endblock %}
+
+{% block bread %}
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Board</a></li>
+<li class="breadcrumb-item "><a href="{% url 'topics' board.id %}">{{ board.name }}</a></li>
+<li class="breadcrumb-item active">New Topic</li>
+
+{% endblock %}

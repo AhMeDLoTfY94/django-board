@@ -18,3 +18,14 @@ def topics(request,board):
     }
 
     return render(request,'core/topics.html',context)
+
+def new_topic(request,board):
+    board=Board.objects.get(id=board)
+
+    context={
+        "board":board,
+    }
+
+
+
+    return render(request,"core/new_topic.html",context)
